@@ -1,5 +1,18 @@
 media: public/img
 content:
+  - name: ai-tools
+    label: AI-Tools
+    type: collection
+    path: content/ai-tools
+    view:
+      fields: [ title, draft, date ]
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: date, label: Date, type: date }
+      - { name: draft, label: Draft, type: boolean }
+      - { name: tags, label: Tags, type: string, list: true }
+      - { name: body, label: Body, type: rich-text }
   - name: posts
     label: Posts
     type: collection
